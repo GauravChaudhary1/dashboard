@@ -1,0 +1,29 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="grc.pc.rep.dashboard.controller.listdisplay"
+	xmlns:controls="grc.pc.rep.dashboard.Control"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<App id="idAppControl">
+		<pages>
+			<Page>
+				<content>
+					<Bar>
+						<contentLeft>
+							<Label text="Selection Info"></Label>
+						</contentLeft>
+						<contentRight>
+							<Button icon="sap-icon://navigation-up-arrow" press="toggleCollapse"></Button>
+						</contentRight>
+					</Bar>
+					<ObjectHeader id="idCritInfo"></ObjectHeader>
+					<Table id="idasmt" class="tableStyle" mode="MultiSelect">
+					</Table>
+				</content>
+				<footer>
+					<Toolbar>
+						<ToolbarSpacer/>
+						<Button id="idMic" icon="sap-icon://microphone" press="onListenCommand"/>
+					</Toolbar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

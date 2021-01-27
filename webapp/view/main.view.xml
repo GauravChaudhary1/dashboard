@@ -1,0 +1,45 @@
+<mvc:View controllerName="grc.pc.rep.dashboard.controller.main" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:l="sap.ui.layout" 
+	xmlns="sap.m" 
+	xmlns:controls="grc.pc.rep.dashboard.Control"
+	displayBlock="true">
+	<App id="idAppControl" backgroundImage="/images/bg.jpg" >
+		<pages>
+			<Page title="{i18n>title}" >
+				<content>
+					<l:Grid id="idform" 
+							defaultSpan="L4"
+							vSpacing="2"
+							hSpacing="2"
+							position="Center"
+							content="{/}">
+						<GenericTile press="handlePress" header="{Title}" frameType="TwoByOne">
+							<TileContent footer="{Type}">
+								<NewsContent contentText="{Descr}" />
+							</TileContent>
+						</GenericTile>
+					</l:Grid>
+				</content>
+				<footer>
+					<Toolbar>
+						<ToolbarSpacer />
+						<Switch change="onMicToggle"></Switch>
+						<Button id="idMic" tooltip="Talk to Assistant" icon="sap-icon://microphone" press="onListenCommand"/>
+						<!--<Button id="chatBtn" icon="sap-icon://discussion" text="Chat"></Button>-->
+						<controls:ChatDialog id="chatbox" 
+										title="Chat"
+										height="500px"
+										width="400px"
+										send="onSendPressed"
+										initialMessage="Hello! How can I help you?"
+										placeHolder="Post something here"
+										userIcon= "https://sdlambert.github.io/loremipsum/img/user168.svg"
+										robotIcon="https://sdlambert.github.io/loremipsum/img/helmet1.svg"
+										buttonIcon="sap-icon://discussion">
+					</controls:ChatDialog>
+					</Toolbar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

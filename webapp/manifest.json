@@ -1,0 +1,158 @@
+{
+	"_version": "1.8.0",
+	"sap.app": {
+		"id": "grc.pc.rep.dashboard",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "servicecatalog.connectivityComponentForManifest",
+			"version": "0.0.0"
+		},
+		"dataSources": {
+			"GRPC_REP_DAB_SRV": {
+				"uri": "/sap/opu/odata/sap/GRPC_REP_DAB_SRV/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localService/metadata.xml"
+				}
+			}
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_belize"
+		]
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "grc.pc.rep.dashboard.view.main",
+			"type": "XML"
+		},
+		"dependencies": {
+			"minUI5Version": "1.30.0",
+			"libs": {
+				"sap.ui.layout": {},
+				"sap.ui.core": {},
+				"sap.m": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "grc.pc.rep.dashboard.i18n.i18n"
+				}
+			},
+			"": {
+				"uri": "/sap/opu/odata/sap/GRPC_REP_DAB_SRV/",
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"settings": {
+					"defaultOperationMode": "Server",
+					"defaultBindingMode": "OneWay",
+					"defaultCountMode": "Request"
+				},
+				"dataSource": "GRPC_REP_DAB_SRV",
+				"preload": true
+			}
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"async": true,
+				"viewPath": "grc.pc.rep.dashboard.view",
+				"controlAggregation": "pages",
+				"controlId": "idAppControl",
+				"clearControlAggregation": false
+			},
+			"routes": [
+				{
+					"name": "Routemain",
+					"pattern": "Routemain",
+					"target": [
+						"Targetmain"
+					]
+				},
+				{
+					"pattern": "listdisplay/{object}",
+					"name": "listdisplay",
+					"target": "listdisplay"
+				},
+				{
+					"pattern": "graph/{object}",
+					"name": "graph",
+					"target": "graph"
+				}
+			],
+			"targets": {
+				"Targetmain": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewName": "main",
+					"routerClass": "sap.m.routing.Router",
+					"async": true,
+					"viewPath": "grc.pc.rep.dashboard.view",
+					"controlAggregation": "pages",
+					"controlId": "idAppControl"
+				},
+				"listdisplay": {
+					"viewType": "XML",
+					"viewName": "listdisplay",
+					"routerClass": "sap.m.routing.Router",
+					"async": true,
+					"viewPath": "grc.pc.rep.dashboard.view",
+					"controlAggregation": "pages",
+					"controlId": "idAppControl",
+					"clearControlAggregation": false
+				},
+				"graph": {
+					"viewType": "XML",
+					"viewName": "graph",
+					"routerClass": "sap.m.routing.Router",
+					"async": true,
+					"viewPath": "grc.pc.rep.dashboard.view",
+					"controlAggregation": "pages",
+					"controlId": "idAppControl",
+					"clearControlAggregation": false
+				}
+			}
+		}
+	},
+	"sap.platform.abap": {
+		"uri": "/sap/bc/ui5_ui5/sap/grpcrepdashb/webapp",
+		"_version": "1.1.0"
+	}
+}

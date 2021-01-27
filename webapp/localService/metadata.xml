@@ -1,0 +1,128 @@
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+	<edmx:DataServices m:DataServiceVersion="2.0">
+		<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="GRPC_REP_DAB_SRV" xml:lang="en" sap:schema-version="1">
+			<EntityType Name="timeframe" sap:content-version="1">
+				<Key><PropertyRef Name="Value"/></Key><Property Name="Value" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="key" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Text" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="text" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="tfyear" sap:content-version="1">
+				<Key><PropertyRef Name="Value"/></Key><Property Name="Value" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="VALUE" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Text" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="TEXT" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="regulation" sap:content-version="1">
+				<Key><PropertyRef Name="Value"/></Key><Property Name="Value" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="VALUE" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Text" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="TEXT" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="controlactivities" sap:content-version="1">
+				<Key><PropertyRef Name="Control"/></Key><Property Name="Control" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="control" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Category" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="category" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Act" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Activity" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Adequate" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Adequate" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Open" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Deficient" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Deficient" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="filter" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="filter" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="asmtflow" sap:content-version="1">
+				<Key><PropertyRef Name="Mandt"/><PropertyRef Name="Assessment"/></Key><Property Name="Mandt" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="MANDT" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Assessment" Type="Edm.String" Nullable="false" MaxLength="32" sap:unicode="false" sap:label="Case Key" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="AssessmentTitle" Type="Edm.String" MaxLength="80" sap:unicode="false" sap:label="Title" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="ParentWiid" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="Top Level Workflow" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="CaseType" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="Case Type" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Status" Type="Edm.String" MaxLength="40" sap:unicode="false" sap:label="System Status" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="ReAssessment" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="TRUE" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="IssueTitle" Type="Edm.String" MaxLength="80" sap:unicode="false" sap:label="Title" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="IssueGuid" Type="Edm.String" MaxLength="32" sap:unicode="false" sap:label="Case Key" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="IssueWiId" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="Work Item ID" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="IssueStatus" Type="Edm.String" MaxLength="40" sap:unicode="false" sap:label="System Status" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="CreatedBy" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="Created By" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="CreateTime" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="Created On" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="ChangedBy" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="Changed By" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="ChangeTime" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="Changed On" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="ClosedBy" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="Closed By" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="ClosingTime" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="Closed At" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Timeframe" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="Timeframe" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="TfYear" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="Year" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="AssessmentDate" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Assessment Date"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="AssessmentBy" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="Assessed by" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="DueDate" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="Due Date" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="IssueCreatedBy" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="Created By" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="IssueCreateTime" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="Created On" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="IssueChangedBy" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="Changed By" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="IssueChangeTime" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="Changed On" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="IssueClosedBy" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="Closed By" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="IssueClosingTime" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="Closed At" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="IssueProcessor" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="Processor" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="IssueOwner" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="Person Respons." sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="PlanGuid" Type="Edm.String" MaxLength="32" sap:unicode="false" sap:label="UUID" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="PlanTitle" Type="Edm.String" MaxLength="80" sap:unicode="false" sap:label="Title" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="PlanStatus" Type="Edm.String" MaxLength="40" sap:unicode="false" sap:label="System Status" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="PlanClosingTime" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="Closed At" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="PlanClosedBy" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="Closed By" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="PlanStartDate" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="Start Date" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="PlanEndDate" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="End Date" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="PlanCompletion" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="Completion" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="PlanOwner" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="Owner" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="PlanOldEnddate" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="End Date" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="PlanLastProcessor" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="Processor" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="PlanWiId" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="Work Item ID" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Statusinfo1" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Statusinfo2" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Statusinfo3" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Statusinfo4" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="sendemail" sap:content-version="1">
+				<Key><PropertyRef Name="body"/></Key><Property Name="body" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="searchhelp" sap:content-version="1">
+				<Key><PropertyRef Name="Entity"/><PropertyRef Name="EntityId"/></Key><Property Name="Value" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Value" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Text" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Text" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Entity" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Entity" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="EntityId" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="EntityId" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="procefficiency" sap:content-version="1">
+				<Key><PropertyRef Name="Date"/><PropertyRef Name="Opendays"/><PropertyRef Name="Eff"/></Key><Property Name="Date" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Date" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Opendays" Type="Edm.Int16" Nullable="false" sap:unicode="false" sap:label="Opendays" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Eff" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Eff" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Assessment" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Assessment" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="AssessmentCreatedBy" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Assessment Created By"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="AssDueDate" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Assessment Due Date" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="filter" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="asmttimeline" sap:content-version="1">
+				<Key><PropertyRef Name="Name"/></Key><Property Name="Name" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Role" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Icon" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Comment" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Date" Type="Edm.DateTime" Nullable="false" Precision="0" sap:unicode="false" sap:label="Time Stamp" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Assessment" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="repdashboard" sap:content-version="1">
+				<Key><PropertyRef Name="Title"/><PropertyRef Name="Application"/></Key><Property Name="Title" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Descr" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Type" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Application" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="absurl" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="centralmatrix" sap:content-version="1">
+				<Key><PropertyRef Name="entityid"/><PropertyRef Name="parent"/></Key><Property Name="entityid" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="parent" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="name" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="type" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="leaf" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="filter" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityContainer Name="GRPC_REP_DAB_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx"><EntitySet Name="timeframeSet" EntityType="GRPC_REP_DAB_SRV.timeframe" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:addressable="false" sap:content-version="1"/><EntitySet Name="tfyearSet" EntityType="GRPC_REP_DAB_SRV.tfyear" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:addressable="false" sap:content-version="1"/><EntitySet Name="regulationSet" EntityType="GRPC_REP_DAB_SRV.regulation" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:addressable="false" sap:content-version="1"/><EntitySet Name="controlactivitiesSet" EntityType="GRPC_REP_DAB_SRV.controlactivities" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/><EntitySet Name="asmtflowSet" EntityType="GRPC_REP_DAB_SRV.asmtflow" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:addressable="false" sap:content-version="1"/><EntitySet Name="sendemailSet" EntityType="GRPC_REP_DAB_SRV.sendemail" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:addressable="false" sap:content-version="1"/><EntitySet Name="searchhelpSet" EntityType="GRPC_REP_DAB_SRV.searchhelp" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:addressable="false" sap:content-version="1"/><EntitySet Name="procefficiencySet" EntityType="GRPC_REP_DAB_SRV.procefficiency" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/><EntitySet Name="asmttimelineSet" EntityType="GRPC_REP_DAB_SRV.asmttimeline" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/><EntitySet Name="repdashboardSet" EntityType="GRPC_REP_DAB_SRV.repdashboard" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/><EntitySet Name="centralmatrixSet" EntityType="GRPC_REP_DAB_SRV.centralmatrix" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/></EntityContainer><atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="./sap/GRPC_REP_DAB_SRV/$metadata"/><atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version" href="./sap/GRPC_REP_DAB_SRV/$metadata"/></Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

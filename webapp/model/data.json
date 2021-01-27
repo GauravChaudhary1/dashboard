@@ -1,0 +1,60 @@
+{
+  "TileCollection" : [
+    {
+      "icon" : "business-objects-experience",
+      "type" : "Monitoring Application",
+      "title" : "Report to show the graphical representation of overall control's effectiveness.",
+      "info" : "Control Effectiveness Report"
+    },
+    {
+      "icon" : "business-objects-experience",
+      "type" : "Monitoring Application",
+      "title" : "Report to show the graphical representation of process efficiency of assessments.",
+      "info" : "Process Efficiency Report"
+    },
+    {
+      "icon" : "business-objects-experience",
+      "type" : "Monitoring Application",
+      "title" : "Report to traverse through the flow of an assessment.",
+      "info" : "Assessment Flow"
+    },
+    {
+      "icon" : "business-objects-experience",
+      "type" : "Validation Application",
+      "title" : "Check where central controls are implemented in an organization.",
+      "info" : "Orgunit and Control Matrix"
+    }
+  ],
+  
+  "Datan" : [
+  {
+  	"Assessment": "As1",
+  	"Control": 1,
+  	"Name": "Gaurav1",
+  	"Rating": "Significantly Deficient",
+  	"Type": "G_CD"
+  },
+  {
+  	"Assessment": "As2",
+  	"Control": 1,
+  	"Name": "Gaurav1",
+  	"Rating": "Significantly Deficient",
+  	"Type": "G_TL"
+  },
+  {
+  	"Assessment": "As3",
+  	"Control": 2,
+  	"Name": "Gaurav2",
+  	"Rating": "Significantly Deficient",
+  	"Type": "G_CD"
+  },
+  {
+  	"Assessment": "As4",
+  	"Control": 2,
+  	"Name": "Gaurav2",
+  	"Rating": "Significantly Deficient",
+  	"Type": "G_TL"
+  }
+  	
+  ]
+}
